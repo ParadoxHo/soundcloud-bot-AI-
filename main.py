@@ -819,9 +819,7 @@ class StableMusicBot:
                     audio=f,
                     title=(track.get('title') or 'Неизвестный трек')[:64],
                     performer=(track.get('artist') or 'Неизвестный исполнитель')[:64],
-                    caption=f"🎵 <b>{track.get('title', 'Неизвестный трек')}</b>\n🎤 {track.get('artist', 'Неизвестный исполнитель')}\n⏱️ {self.format_duration
-
-(track.get('duration'))}\n💾 {actual_size_mb:.1f} MB",
+                    caption=f"🎵 <b>{track.get('title', 'Неизвестный трек')}</b>\n🎤 {track.get('artist', 'Неизвестный исполнитель')}\n⏱️ {self.format_duration(track.get('duration'))}\n💾 {actual_size_mb:.1f} MB",
                     parse_mode='HTML',
                 )
             
